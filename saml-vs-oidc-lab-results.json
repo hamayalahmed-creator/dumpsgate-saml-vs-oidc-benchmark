@@ -1,0 +1,72 @@
+{
+  "env": {
+    "python": "3.12.3",
+    "signxml": "4.x",
+    "pyjwt": "2.7.0",
+    "cryptography": "46.0.6",
+    "lxml": "6.0.2",
+    "cpu": "x86_64"
+  },
+  "size": {
+    "3": {
+      "saml_xml": 4614,
+      "saml_b64": 6152,
+      "saml_post_body": 6241,
+      "jwt": 875
+    },
+    "20": {
+      "saml_xml": 5481,
+      "saml_b64": 7308,
+      "saml_post_body": 7397,
+      "jwt": 1125
+    },
+    "100": {
+      "saml_xml": 9561,
+      "saml_b64": 12748,
+      "saml_post_body": 12837,
+      "jwt": 2298
+    }
+  },
+  "verify": {
+    "saml": {
+      "median_ms": 0.748,
+      "p95_ms": 0.914,
+      "n": 1000
+    },
+    "jwt": {
+      "median_ms": 0.065,
+      "p95_ms": 0.09,
+      "n": 5000
+    }
+  },
+  "tamper": {
+    "saml_modified_attr": "rejected (InvalidDigest)",
+    "saml_doctype": "rejected (InvalidInput)",
+    "jwt_modified_claim": "rejected (InvalidSignatureError)",
+    "jwt_alg_none": "rejected (InvalidAlgorithmError)",
+    "jwt_wrong_aud": "rejected (InvalidAudienceError)",
+    "saml_wrong_aud_signature_only": "signature valid; audience NOT checked by signature library (app must check: expected other-app, got https://app.example.com)"
+  },
+  "config": {
+    "saml_sp_metadata_bytes": 1650,
+    "saml_idp_metadata_bytes": 1618,
+    "saml_values_to_exchange": [
+      "SP entityID",
+      "ACS URL",
+      "SP signing cert (if signed requests)",
+      "IdP entityID",
+      "IdP SSO URL",
+      "IdP signing certificate",
+      "NameID format",
+      "attribute mapping"
+    ],
+    "oidc_values_to_enter": [
+      "issuer",
+      "client_id",
+      "redirect_uri",
+      "scope",
+      "client_secret (confidential clients only)"
+    ],
+    "oidc_client_cfg_bytes": 152
+  }
+}
