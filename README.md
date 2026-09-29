@@ -2,7 +2,7 @@
 
 A reproducible lab test comparing a signed SAML 2.0 Response with an OpenID Connect (OIDC) ID token for the same user and claims.
 
-Full write-up: [SAML vs OpenID: Which SSO Protocol Should You Use in 2026?](https://example.com/saml-vs-openid)
+Full write-up: [SAML vs OpenID: Which SSO Protocol Should You Use in 2026?](https://dumpsgate.com/saml-vs-oidc/)
 
 ## What it measures
 
